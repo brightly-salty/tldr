@@ -9,7 +9,7 @@
 
 - Replace all occurrences of an extended regular expression in a file:
 
-`sed -E 's/{{regex}}/{{replace}}/g' {{filename}}`
+`sed -E 's/{{regular_expression}}/{{replace}}/g' {{filename}}`
 
 - Replace all occurrences of a string [i]n a file, overwriting the file (i.e. in-place):
 
@@ -27,7 +27,7 @@
 
 `sed -e 's/{{find}}/{{replace}}/' -e 's/{{find}}/{{replace}}/' {{filename}}`
 
-- Replace separator / by any other character not used in the find or replace patterns, e.g., #:
+- Replace separator `/` by any other character not used in the find or replace patterns, e.g. `#`:
 
 `sed 's#{{find}}#{{replace}}#' {{filename}}`
 

@@ -1,7 +1,7 @@
 # exa
 
 > Ein moderner Ersatz für `ls` (Verzeichnisinhalte auflisten).
-> Mehr Informationen: <https://the.exa.website>.
+> Weitere Informationen: <https://the.exa.website>.
 
 - Liste eine Datei pro Zeile auf:
 
@@ -26,3 +26,11 @@
 - Liste Dateien nach Änderungsdatum aufsteigend sortiert auf:
 
 `exa --long --sort={{modified}}`
+
+- Liste Dateien inklusive Header, Icons und Git-Status:
+
+`exa --long --header --icons --git`
+
+- Liste keine Dateien auf, die in `.gitignore` erwähnt werden:
+
+`exa --git-ignore`

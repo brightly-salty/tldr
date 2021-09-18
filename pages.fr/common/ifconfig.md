@@ -1,6 +1,7 @@
 # ifconfig
 
 > Configurateur des interfaces réseau.
+> Plus d'informations: <https://net-tools.sourceforge.io/man/ifconfig.8.html>.
 
 - Affiche les paramètres de réseau d'un adaptateur ethernet :
 
@@ -18,6 +19,6 @@
 
 `ifconfig {{eth0}} up`
 
-- Assigne une addresse IP à l'interface eth0 :
+- Assigne une adresse IP à l'interface eth0 :
 
 `ifconfig {{eth0}} {{addresse_ip}}`

@@ -7,30 +7,30 @@
 
 `git notes list`
 
-- Lister toutes les notes attaches a un objet donné :
+- Lister toutes les notes attachées à un objet donné :
 
-`git notes list [{{object}}]`
+`git notes list [{{objet}}]`
 
-- Afficher les notes attachés a un objet donné :
+- Afficher les notes attachées à un objet donné :
 
-`git notes show [{{object}}]`
+`git notes show [{{objet}}]`
 
 - Ajoute une note à un objet donné :
 
-`git notes append {{object}}`
+`git notes append {{objet}}`
 
 - Ajoute une note à un objet donné, en spécifiant le message :
 
-`git notes append --message="{{message_text}}"`
+`git notes append --message="{{texte_du_message}}"`
 
-- Edite une note éxistante :
+- Édite une note existante :
 
-`git notes edit [{{object}}]`
+`git notes edit [{{objet}}]`
 
-- Copy la note d'un objet vers un autre :
+- Copie la note d'un objet vers un autre :
 
-`git notes copy {{source_object}} {{objet_cible}}`
+`git notes copy {{objet_source}} {{objet_cible}}`
 
-- Supprime toutes les notes d'un objet spécifié :
+- Supprime toutes les notes d'un objet donné :
 
-`git notes remove {{object}}`
+`git notes remove {{objet}}`
