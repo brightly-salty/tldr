@@ -2,7 +2,7 @@
 
 > Rust pakketbeheerder.
 > Beheer Rust projecten en hun afhankelijkheden (crates).
-> Meer informatie: <https://crates.io/>.
+> Meer informatie: <https://crates.io>.
 
 - Zoek naar crates:
 
@@ -30,4 +30,4 @@
 
 - Bouw met een gegeven aantal taken. (Standaard is het aantal CPU-kernen):
 
-`cargo build -j {{taken}}`
+`cargo build --jobs {{aantal_taken}}`

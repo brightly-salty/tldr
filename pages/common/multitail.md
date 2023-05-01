@@ -1,7 +1,7 @@
 # multitail
 
 > Extension of tail.
-> More information: <https://www.vanheusden.com/multitail/examples.php>.
+> More information: <https://manned.org/multitail>.
 
 - Tail all files matching a pattern in a single stream:
 
@@ -9,7 +9,7 @@
 
 - Tail all files in a directory in a single stream:
 
-`multitail -Q 1 '{{directory}}/*'`
+`multitail -Q 1 '{{path/to/directory}}/*'`
 
 - Automatically add new files to a window:
 

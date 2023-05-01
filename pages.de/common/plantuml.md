@@ -1,13 +1,13 @@
 # plantuml
 
 > Erstelle UML-Diagramme aus einer reinen Textsprache und rendere sie in verschiedenen Formaten.
-> Mehr Informationen: <https://plantuml.com/en/command-line>.
+> Weitere Informationen: <https://plantuml.com/en/command-line>.
 
 - Rendere Diagramme im Standardformat (PNG):
 
 `plantuml {{pfad/zu/diagramm1.puml}} {{pfad/zu/diagramm2.puml}}`
 
-- Rendere eine Diagramm im vorgegebenen Format (z.B. `png`, `pdf`, `svg`, `txt`):
+- Rendere ein Diagramm im vorgegebenen Format (z.B. `png`, `pdf`, `svg`, `txt`):
 
 `plantuml -t {{format}} {{pfad/zu/diagramm.puml}}`
 
@@ -15,7 +15,7 @@
 
 `plantuml {{pfad/zu/verzeichnis}}`
 
-- Rendere ein Diagramm in ein bistimmtes Ausgabeverzeichnis:
+- Rendere ein Diagramm in ein bestimmtes Ausgabeverzeichnis:
 
 `plantuml -o {{pfad/zu/verzeichnis}} {{pfad/zu/diagramm.puml}}`
 

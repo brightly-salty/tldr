@@ -1,6 +1,7 @@
 # ipcmk
 
 > Create IPC (Inter-process Communication) resources.
+> More information: <https://manned.org/ipcmk>.
 
 - Create a shared memory segment:
 
@@ -16,4 +17,4 @@
 
 - Create a shared memory segment with specific permissions (default is 0644):
 
-`ipcmk --shmem {{segment_size_in_bytes}} {{octal_permissons}}`
+`ipcmk --shmem {{segment_size_in_bytes}} {{octal_permissions}}`

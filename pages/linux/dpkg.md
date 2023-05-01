@@ -1,7 +1,9 @@
 # dpkg
 
 > Debian package manager.
-> More information: <https://manpages.debian.org/buster/dpkg/dpkg.1.en.html>.
+> Some subcommands such as `dpkg deb` have their own usage documentation.
+> For equivalent commands in other package managers, see <https://wiki.archlinux.org/title/Pacman/Rosetta>.
+> More information: <https://manpages.debian.org/latest/dpkg/dpkg.html>.
 
 - Install a package:
 

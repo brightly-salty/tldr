@@ -1,11 +1,12 @@
 # unalias
 
-> Ukloni alijase.
+> Ukloni pseudonime.
+> Više informacija: <https://manned.org/unalias>.
 
-- Ukloni alijas:
+- Ukloni pseudonim:
 
 `unalias {{ime_alijasa}}`
 
-- Ukloni sve alijase:
+- Ukloni sve pseudonime:
 
 `unalias -a`

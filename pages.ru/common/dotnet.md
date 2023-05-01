@@ -1,7 +1,8 @@
 # dotnet
 
 > Кросс-платформенная утилита командной строки .NET для .NET Core.
-> Больше информации: <https://docs.microsoft.com/dotnet/core/tools>.
+> Некоторые подкоманды, такие как `dotnet build`, имеют собственную документацию по использованию.
+> Больше информации: <https://learn.microsoft.com/dotnet/core/tools>.
 
 - Инициализировать новый проект .NET:
 

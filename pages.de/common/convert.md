@@ -1,7 +1,7 @@
 # convert
 
-> Imagemagick Bildkonvertierungswerkzeug.
-> Mehr Informationen: <https://imagemagick.org/script/convert.php>.
+> ImageMagick Bildkonvertierungswerkzeug.
+> Weitere Informationen: <https://imagemagick.org/script/convert.php>.
 
 - Konvertiere ein Bild von JPG nach PNG:
 
@@ -15,7 +15,7 @@
 
 `convert {{pfad/zu/bild.png}} -resize 640x480 {{pfad/zu/bild2.png}}`
 
-- Hänge Bilder horizontal aneinader:
+- Hänge Bilder horizontal aneinander:
 
 `convert {{pfad/zu/bild1.png}} {{pfad/zu/bild2.png}} {{pfad/zu/bild3.png}} +append {{pfad/zu/bild123.png}}`
 
@@ -30,3 +30,7 @@
 - Erstelle ein Bild mit nichts als einem festen Hintergrund:
 
 `convert -size {{800x600}} "xc:{{#ff0000}}" {{pfad/zu/bild.png}}`
+
+- Erstelle ein Favicon aus mehreren Bildern verschiedener Größe:
+
+`convert {{pfad/zu/bild1.png}} {{pfad/zu/bild2.png}} {{pfad/zu/bild3.png}} {{pfad/zu/bild.ico}}`

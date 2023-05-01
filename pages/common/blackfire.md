@@ -1,9 +1,9 @@
 # blackfire
 
-> A command line profiling tool for PHP.
+> A command-line profiling tool for PHP.
 > More information: <https://blackfire.io>.
 
-- Initialise and configure the Blackfire client:
+- Initialize and configure the Blackfire client:
 
 `blackfire config`
 

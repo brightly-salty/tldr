@@ -1,24 +1,32 @@
 # nano
 
-> Simple, easy to use command-line text editor. An enhanced, free Pico clone.
+> Command-line text editor. An enhanced `Pico` clone.
 > More information: <https://nano-editor.org>.
 
-- Open a specific file:
+- Start the editor:
 
-`nano {{path/to/file}}`
+`nano`
 
-- Open a file positioning the cursor at the specified line and column:
+- Start the editor without using configuration files:
+
+`nano --ignorercfiles`
+
+- Open specific files, moving to the next file when closing the previous one:
+
+`nano {{path/to/file1 path/to/file2 ...}}`
+
+- Open a file and position the cursor at a specific line and column:
 
 `nano +{{line}},{{column}} {{path/to/file}}`
 
-- Enable smooth scrolling:
+- Open a file and enable soft wrapping:
 
-`nano -S {{filename}}`
+`nano --softwrap {{path/to/file}}`
 
-- Indent new lines to the previous lines' indentation:
+- Open a file and indent new lines to the previous line's indentation:
 
-`nano -i {{filename}}`
+`nano --autoindent {{path/to/file}}`
 
-- Before modification, backup separately as `{{current_file_name}}~`:
+- Open a file and create a backup file (`path/to/file~`) on save:
 
-`nano -B {{filename}}`
+`nano --backup {{path/to/file}}`

@@ -1,7 +1,7 @@
 # apt-add-repository
 
 > Editiere die Repository-Listen.
-> Mehr Informationen: <https://manpages.debian.org/latest/software-properties-common/apt-add-repository.1.html>.
+> Weitere Informationen: <https://manpages.debian.org/latest/software-properties-common/apt-add-repository.1.html>.
 
 - Füge ein neues Repository hinzu:
 
@@ -15,6 +15,6 @@
 
 `apt-add-repository --update {{repository}}`
 
-- Aktiviere Source Pakete:
+- Aktiviere Source-Pakete:
 
 `apt-add-repository --enable-source {{repository}}`

@@ -1,6 +1,7 @@
 # hdparm
 
 > Get and set SATA and IDE hard drive parameters.
+> More information: <https://manned.org/hdparm>.
 
 - Request the identification info of a given device:
 
@@ -25,3 +26,7 @@
 - Put the drive into idle (low-power) mode, also setting its standby timeout:
 
 `sudo hdparm -S {{standby_timeout}} {{device}}`
+
+- Test the read speed of a specific device:
+
+`sudo hdparm -tT {{device}}`

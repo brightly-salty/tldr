@@ -1,6 +1,7 @@
 # hdiutil
 
 > Utility to create and manage disk images.
+> More information: <https://ss64.com/osx/hdiutil.html>.
 
 - Mount an image:
 
@@ -8,7 +9,7 @@
 
 - Unmount an image:
 
-`hdiutil detach /Volumes/{{volume_name}}`
+`hdiutil detach /Volumes/{{volume_file}}`
 
 - List mounted images:
 

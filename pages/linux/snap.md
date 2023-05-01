@@ -2,6 +2,7 @@
 
 > Tool for managing the "snap" self-contained software packages.
 > Similar to what `apt` is for ".deb".
+> More information: <https://manned.org/snap>.
 
 - Search for a package:
 
@@ -14,6 +15,10 @@
 - Update a package:
 
 `snap refresh {{package_name}}`
+
+- Update a package to another channel (track, risk, or branch):
+
+`snap refresh {{package_name}} --channel={{channel}}`
 
 - Update all packages:
 

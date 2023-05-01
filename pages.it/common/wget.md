@@ -10,13 +10,13 @@
 
 - Scarica il contenuto dell'URL in un file (dal nome "efgh" in questo caso):
 
-`wget -O {{efgh}} {{https://esempio.com/abcd}}`
+`wget --output-document {{efgh}} {{https://esempio.com/abcd}}`
 
 - Scarica una singola pagina web e tutte le sue risorse (script, immagini, stili, ecc..) aspettando 3 secondi dopo ogni richiesta:
 
 `wget --page-requisites --convert-links --wait=3 {{https://esempio.com/pagina_web.html}}`
 
-- Scarica tutti i file elencati nella cartella e nelle sue sotto-cartelle (non scarica gli elementi incorporati nella pagina):
+- Scarica tutti i file elencati nella directory e nelle sue sotto-directory (non scarica gli elementi incorporati nella pagina):
 
 `wget --mirror --no-parent {{https://esempio.com/unqualchepercorso/}}`
 
@@ -30,8 +30,8 @@
 
 - Riprende un download incompleto:
 
-`wget -c {{https://esempio.com}}`
+`wget --continue {{https://esempio.com}}`
 
-- Scarica tutti gli URL contenuti in un file di testo in una cartella specificata:
+- Scarica tutti gli URL contenuti in un file di testo in una directory specificata:
 
-`wget -P {{percorso/alla/cartella}} -i {{lista_di_URL.txt}}`
+`wget --directory-prefix {{percorso/della/directory}} --input-file {{lista_di_URL.txt}}`

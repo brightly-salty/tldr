@@ -3,22 +3,22 @@
 > Preprocess and compile C and C++ source files, then assemble and link them together.
 > More information: <https://gcc.gnu.org>.
 
-- Compile multiple source files into executable:
+- Compile multiple source files into an executable:
 
-`gcc {{source1.c}} {{source2.c}} -o {{executable}}`
+`gcc {{path/to/source1.c path/to/source2.c ...}} -o {{path/to/output_executable}}`
 
-- Allow warnings, debug symbols in output:
+- Show common warnings, debug symbols in output, and optimize without affecting debugging:
 
-`gcc {{source.c}} -Wall -Og -o {{executable}}`
+`gcc {{path/to/source.c}} -Wall -g -Og -o {{path/to/output_executable}}`
 
 - Include libraries from a different path:
 
-`gcc {{source.c}} -o {{executable}} -I{{header_path}} -L{{library_path}} -l{{library_name}}`
+`gcc {{path/to/source.c}} -o {{path/to/output_executable}} -I{{path/to/header}} -L{{path/to/library}} -l{{library_name}}`
 
 - Compile source code into Assembler instructions:
 
-`gcc -S {{source.c}}`
+`gcc -S {{path/to/source.c}}`
 
-- Compile source code without linking:
+- Compile source code into an object file without linking:
 
-`gcc -c {{source.c}}`
+`gcc -c {{path/to/source.c}}`

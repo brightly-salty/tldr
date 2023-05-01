@@ -1,11 +1,12 @@
 # amass
 
 > In-depth Attack Surface Mapping and Asset Discovery tool.
+> Some subcommands such as `amass db` have their own usage documentation.
 > More information: <https://github.com/OWASP/Amass>.
 
-- Check the Amass version:
+- Execute an Amass subcommand:
 
-`amass -version`
+`amass {{subcommand}}`
 
 - Show general help:
 
@@ -15,6 +16,6 @@
 
 `amass -help {{subcommand}}`
 
-- Execute an Amass subcommand:
+- Display version:
 
-`amass {{subcommand}}`
+`amass -version`

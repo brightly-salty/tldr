@@ -1,7 +1,7 @@
 # cradle package
 
 > Verwalte Pakete für Cradle Instanzen.
-> Mehr Informationen: <https://cradlephp.github.io/docs/3.B.-Reference-Command-Line-Tools.html#package>.
+> Weitere Informationen: <https://cradlephp.github.io/docs/3.B.-Reference-Command-Line-Tools.html#package>.
 
 - Liste aller verfügbaren Pakete auf:
 
@@ -19,14 +19,14 @@
 
 `cradle package install {{paket}} {{version}}`
 
-- Aktualisiere eine Paket:
+- Aktualisiere ein Paket:
 
 `cradle package update {{paket}}`
 
-- Aktualisiere ein Paketes zu einer bestimmten Paket-Version:
+- Aktualisiere ein Paket zu einer bestimmten Paket-Version:
 
 `cradle package update {{paket}} {{version}}`
 
-- Entferne eine Paket:
+- Entferne ein Paket:
 
 `cradle package remove {{paket}}`

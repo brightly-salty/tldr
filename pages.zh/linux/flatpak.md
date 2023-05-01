@@ -1,6 +1,7 @@
 # flatpak
 
 > 构建、安装和运行 Flatpak 应用和运行时。
+> 更多信息：<https://docs.flatpak.org/en/latest/flatpak-command-reference.html#flatpak>.
 
 - 运行已安装应用：
 
@@ -25,3 +26,11 @@
 - 列出所有已配置的远程源：
 
 `flatpak remote-list`
+
+- 移除一个已安装的应用程序：
+
+`flatpak remove {{应用名}}`
+
+- 显示一个已安装的应用程序的信息：
+
+`flatpak info {{应用名}}`

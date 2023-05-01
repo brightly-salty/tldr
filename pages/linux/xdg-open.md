@@ -1,13 +1,13 @@
 # xdg-open
 
 > Opens a file or URL in the user's preferred application.
-> More information: <https://man.archlinux.org/man/xdg-open.1>.
+> More information: <https://portland.freedesktop.org/doc/xdg-open.html>.
 
 - Open the current directory in the default file explorer:
 
 `xdg-open .`
 
-- Open an URL in the default browser:
+- Open a URL in the default browser:
 
 `xdg-open {{https://example.com}}`
 

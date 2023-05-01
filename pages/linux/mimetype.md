@@ -1,6 +1,7 @@
 # mimetype
 
 > Automatically determine the MIME type of a file.
+> More information: <https://manned.org/mimetype>.
 
 - Print the MIME type of a given file:
 
@@ -14,7 +15,7 @@
 
 `mimetype --describe {{path/to/file}}`
 
-- Determine the MIME type of stdin (does not check a filename):
+- Determine the MIME type of `stdin` (does not check a filename):
 
 `{{some_command}} | mimetype --stdin`
 

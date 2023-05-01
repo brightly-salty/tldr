@@ -5,11 +5,15 @@
 
 - Revert the most recent commit:
 
-`git revert {{@}}`
+`git revert {{HEAD}}`
 
 - Revert the 5th last commit:
 
 `git revert HEAD~{{4}}`
+
+- Revert a specific commit:
+
+`git revert {{0c01a9}}`
 
 - Revert multiple commits:
 

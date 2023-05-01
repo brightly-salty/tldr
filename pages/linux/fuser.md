@@ -1,6 +1,7 @@
 # fuser
 
 > Display process IDs currently using files or sockets.
+> More information: <https://manned.org/fuser>.
 
 - Find which processes are accessing a file or directory:
 
@@ -21,3 +22,7 @@
 - Find which processes are accessing the filesystem containing a specific file or directory:
 
 `fuser --mount {{path/to/file_or_directory}}`
+
+- Kill all processes with a TCP connection on a specific port:
+
+`fuser --kill {{port}}/tcp`

@@ -1,6 +1,7 @@
 # explorer
 
 > The Windows File Explorer.
+> More information: <https://ss64.com/nt/explorer.html>.
 
 - Open Windows Explorer:
 
@@ -12,4 +13,4 @@
 
 - Open Windows Explorer in a specific directory:
 
-`explorer {{path/to/directory}}`
+`explorer {{path\to\directory}}`

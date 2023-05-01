@@ -3,7 +3,7 @@
 > An HTML, XML, SAX and Reader parser.
 > More information: <https://nokogiri.org>.
 
-- Parse the contents of a url or file:
+- Parse the contents of a URL or file:
 
 `nokogiri {{url|path/to/file}}`
 
@@ -11,7 +11,7 @@
 
 `nokogiri {{url|path/to/file}} --type {{xml|html}}`
 
-- Load a specific initialisation file before parsing:
+- Load a specific initialization file before parsing:
 
 `nokogiri {{url|path/to/file}} -C {{path/to/config_file}}`
 

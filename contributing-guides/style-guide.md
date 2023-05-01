@@ -4,75 +4,238 @@ This page lists specific formatting instructions for `tldr` pages.
 
 ## Layout
 
-The basic format of each page should match the following template:
+The basic format of each page should match the following template and have at most 8 command examples:
 
-```
-# command-name
+```md
+# command name
 
-> Short, snappy description.
+> Short, snappy command description.
 > Preferably one line; two are acceptable if necessary.
-> More information: <https://example.com>.
+> More information: <https://example.com/command_name/help/page>.
 
-- Example description:
+- Code description:
 
-`command -opt1 -opt2 -arg1 {{arg_value}}`
+`command_name options`
 
-- Example description:
+- Code description:
 
-`command -opt1 -opt2`
+`command_name options`
+
+...
 ```
 
-There actually is a linter/formatter that enforces the format above.
+Example:
+
+```md
+# krita
+
+> Krita is a sketching and painting program designed for digital artists.
+> See also: `gimp`.
+> More information: <https://docs.krita.org/en/reference_manual/linux_command_line.html>.
+
+- Start Krita:
+
+`krita`
+
+- Open specific files:
+
+`krita {{path/to/image1 path/to/image2 ...}}`
+
+- Start without a splash screen:
+
+`krita --nosplash`
+
+- Start with a specific workspace:
+
+`krita --workspace {{Animation}}`
+
+- Start in fullscreen mode:
+
+`krita --fullscreen`
+```
+
+> :bulb: The help page can be any documentation/project/tutorial page, not just a man page,
+> but documentation pages are preferred.
+
+There is a linter that enforces the format above.
 It is run automatically on every pull request,
 but you may install it to test your contributions locally before submitting them:
 
-```
-npm install tldr-lint
-tldrl -f {{page.md}}
-```
-
-For other ways to use `tldrl`, such as linting an entire directory, check out (what else!)
-[`tldr tldrl`](https://github.com/tldr-pages/tldr/blob/master/pages/common/tldrl.md)
-
-If you're using the Node.js client of tldr-pages, you can preview a page locally using the `-f` flag (aka `--render`):
-
-```
-tldr -f {{page.md}}
+```sh
+npm install --global tldr-lint
+tldr-lint path/to/tldr_page.md
 ```
 
-## Token syntax
+For other ways to use `tldr-lint`, such as linting an entire directory, check out (what else!)
+[`tldr tldr-lint`](https://github.com/tldr-pages/tldr/blob/main/pages/common/tldr-lint.md). Alternatively, you can also use its alias `tldrl`.
 
-User-provided values should use the `{{token}}` syntax
+Your client may be able to preview a page locally using the `--render` flag:
+
+```sh
+tldr --render path/to/tldr_page.md
+```
+
+### Aliases
+
+If a command can be called with alternative names (like `vim` can be called by `vi`), alias pages can be created to point the user to the original command name.
+
+```md
+# command_name
+
+> This command is an alias of `original-command-name`.
+> More information: <https://example.com/original/command/help/page>.
+
+- View documentation for the original command:
+
+`tldr original_command_name`
+```
+
+Example:
+
+```md
+# vi
+
+> This command is an alias of `vim`.
+
+- View documentation for the original command:
+
+`tldr vim`
+
+```
+
+- Pre-translated alias page templates can be found [here](https://github.com/tldr-pages/tldr/blob/main/contributing-guides/translation-templates/alias-pages.md).
+
+## Option syntax
+
+- Use GNU-style **long options** (like `--help` rather than `-h`) when they are cross-platform compatible (intended to work the same across multiple platforms).
+- In other cases, use short options (like `-h`).
+
+## Placeholder syntax
+
+User-provided values should use the `{{placeholder}}` syntax
 in order to allow `tldr` clients to highlight them.
 
-Keep the following guidelines in mind when choosing tokens:
+Keep the following guidelines in mind when choosing placeholders:
 
-1. Use short but descriptive tokens,
-   ex. `{{source_file}}` or `{{wallet.txt}}`.
-2. Use [`snake_case`](https://en.wikipedia.org/wiki/Snake_case) for multi-word tokens.
-3. Use `{{filename}}` rather than `{{file_name}}`.
-4. For any reference to paths to files or directories, use the format `{{path/to/<placeholder>}}`.
-   For example, `ln -s {{path/to/file}} {{path/to/symlink}}`.
-   In case of a possible reference both to a file or a directory, use `{{path/to/file_or_directory}}`
-5. Follow the `{{path/to/<placeholder>}}` convention for all path-related commands, except when the
-   file location is implicit.
-6. If a command expects the file to have a particular extension, use it.
-   For example, `unrar x {{compressed.rar}}`.
-   In case a generic extension is needed, use `{{.ext}}`, but **only** if an extension is required.
-   For instance, in find.md's example "Find files by extension" (`find {{root_path}} -name '{{*.ext}}'`)
-   using `{{*.ext}}` explains the command without being unnecessarily specific;
-   But in a command like `wc -l {{file}}`, using `{{file}}` (without extension) is sufficient.
-7. If the example is clearer with an actual value rather than a generic placeholder, use the actual value.
-   For example, use `iostat {{2}}` rather than `iostat {{interval_in_secs}}`.
-8. If a command performs irreversible changes to a file system or to user's devices, then write every example in a way that they cannot be unmindfully copy-pasted by the user.
-   For example, instead of `ddrescue --force --no-scrape /dev/sda /dev/sdb` write `ddrescue --force --no-scrape {{/dev/sdX}} {{/dev/sdY}}` and use the `{{/dev/sdXY}}` placeholder for *block devices* instead of `/dev/sda1`.
+### Naming
 
-In general, tokens should make it as intuitive as possible
+- Use short but descriptive placeholders,
+  such as `{{path/to/source_file}}` or `{{path/to/wallet.txt}}`.
+- Use [`snake_case`](https://wikipedia.org/wiki/snake_case) for multi-word placeholders.
+- Use a generic placeholder rather than an actual value where a generic placeholder is available (but there is an exception to this listed below). For example, use
+  `iostat {{1..infinity}}` rather than `iostat {{2}}`.
+ - If there are several consecutive placeholders of the same type
+  which don't allow adding arbitrary text in them (ranges), then instead of generic placeholders use descriptive ones. For example prefer `input swipe {{x_position}} {{y_position}} {{x_position}} {{y_position}} {{seconds}}`
+  instead of `input swipe {{-infinity..infinity}} {{-infinity..infinity}} {{-infinity..infinity}} {{-infinity..infinity}} {{1..infinity}}`.
+
+### Paths
+
+- Use `{{filename}}` when just file name is expected.
+- For any reference to paths of files or directories,
+  use the format `{{path/to/<placeholder>}}`,
+  except when the location is implicit.
+- When the path cannot be relative,
+  but has to start at the root of the filesystem,
+  prefix it with a slash,
+  such as `get {{/path/to/remote_file}}`.
+- In case of a possible reference both to a file or a directory,
+  use `{{path/to/file_or_directory}}`.
+
+### Extensions
+
+- If a particular extension is expected for the file, append it.
+  For example, `unrar x {{path/to/compressed.rar}}`.
+- In case a generic extension is needed, use `{{.ext}}`, but **only** if an extension is required.
+  For instance, in `find.md`'s example "Find files by extension" (`find {{path/to/root}} -name '{{*.ext}}'`)
+  using `{{*.ext}}` explains the command without being unnecessarily specific;
+  while in `wc -l {{path/to/file}}` using `{{path/to/file}}` (without extension) is sufficient.
+
+### Grouping placeholders
+
+- If a command can take 0 or more arguments of the same kind, use an ellipsis: `{{placeholder1 placeholder2 ...}}`.
+  For instance, if multiple paths are expected `{{path/to/directory1 path/to/directory2 ...}}` can be used.
+- If a command can take 0 or more arguments of different kinds, use an ellipsis: `{{placeholder1|placeholder2|...}}`.
+  If there are more than 5 possible values use `|...` after the last item.
+- It's impossible to restrict the minimum or (and) maximum placeholder count via `ellipsis`.
+
+It's up to the program to decide how to handle duplicating values, provided syntax
+tells no info about whether items are mutually exclusive or not.
+
+### Special cases
+
+- If a command performs irreversible changes to a file system or devices,
+  write every example in a way that cannot be copy pasted thoughtlessly.
+  For example, instead of `ddrescue --force --no-scrape /dev/sda /dev/sdb`
+  write `ddrescue --force --no-scrape {{/dev/sdX}} {{/dev/sdY}}`
+  and use the `{{/dev/sdXY}}` placeholder for *block devices* instead of `/dev/sda1`.
+
+In general, placeholders should make it as intuitive as possible
 to figure out how to use the command and fill it in with values.
 
-More technical wording on description lines should use the `backtick` syntax.
+Technical wording on description lines should use the `backtick` syntax.
 Use backticks on the following:
 
-1. Paths, ex. `package.json`, `/etc/package.json`.
-2. Extensions, ex. `.dll`.
-3. Commands, ex. `ls`.
+- Paths, ex. `package.json`, `/etc/package.json`.
+- Extensions, ex. `.dll`.
+- Commands, ex. `ls`.
+
+## Imperative Mood
+
+- Example descriptions have to be phrased in imperative mood.
+- For example, use `List all files` instead of `Listing all files` or `File listing`.
+- This also applies to all translations by default unless otherwise specified in the language-specific section below.
+
+## Serial Comma
+
+- When declaring a list of 3 or more items,
+use a [serial comma](https://en.wikipedia.org/wiki/Serial_comma),
+also known as the Oxford comma,
+since omitting it can create ambiguity.
+
+> Delete the Git branches, tags and remotes.
+
+The example above does not use a serial comma, so this could mean one of two things:
+* Delete the Git branches named `tags` and `remotes`.
+* Delete all of the following: Git branches, Git tags, and Git remotes.
+
+This can be resolved by inserting a comma before the "and" or "or" in the final element in the list.
+
+> Delete the Git branches, tags, and remotes.
+
+## More information links
+
+On the `More information` line, prefer linking to the author's provided documentation.
+
+When not available, use <https://manned.org> as the default fallback. 
+
+## Language-Specific Rules
+
+### Chinese-Specific Rules
+
+When Chinese words, Latin words and Arabic numerals are written in the same sentence, more attention must be paid to copywriting.
+
+The following guidelines are applied to Chinese (`zh`) and traditional Chinese (`zh_TW`) pages:
+
+1. Place one space before/after English words and numbers.
+  - For example, use `列出所有 docker 容器` rather than `列出所有docker容器`.
+  - For example, use `宽度为 50 个字` rather than `宽度为50个字`.
+2. Place one space between numbers and units **except** degrees and percentages.
+  - For example, use `容量 50 MB` rather than `容量 50MB`.
+  - For instances of degree and percentage, use `50°C` and `50%` rather than `50 °C` and `50 %`.
+3. No additional spaces before/after full-width punctuations.
+  - For example, use `开启 shell，进入交互模式` rather than `开启 shell ，进入交互模式`
+4. Use full-width punctuations except for long Latin clauses.
+  - For example, use `嗨，你好。` rather than `嗨, 你好.`
+5. Use a half-width punctuation to end a sentence when the last character is half-width.
+  - For example, use `将代码转化为 Python 3.` rather than `将代码转化为 Python 3。`
+6. Use precise form for technical terms, and do not use unofficial Chinese abbreviations.
+  - For example, use `Facebook` rather than `facebook`, `fb` or `脸书`.
+
+In order to maintain readability and normalization, please comply with the 6 rules above as much as possible when translating pages into Chinese.
+
+For more information and examples of Chinese-specific rules, check out [*Chinese Copywriting Guidelines*](https://github.com/sparanoid/chinese-copywriting-guidelines/blob/master/README.en.md).
+
+### French-Specific Rules
+
+Example descriptions on pages in French must use the third person singular present indicative tense (présent de l'indicatif à la troisième personne du singulier).
+For example, use `Extrait une archive` rather than `Extraire une archive` or `Extrais une archive`.

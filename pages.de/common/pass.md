@@ -2,7 +2,7 @@
 
 > Programm zum Speichern und Lesen von Passwörtern und anderen sensiblen Daten.
 > Die Daten sind mit GPG verschlüsselt und werden mit einem Git repository verwaltet.
-> Mehr Informationen: <https://www.passwordstore.org>.
+> Weitere Informationen: <https://www.passwordstore.org>.
 
 - Initialisiere oder verschlüssle einen neuen oder bestehenden Speicher mit einer oder mehreren GPG IDs neu:
 
@@ -31,3 +31,7 @@
 - Initialisiere ein Git Repository (Alle durch pass durchgeführten Änderungen werden automatisch committed):
 
 `pass git init`
+
+- Führe einen Git-Befehl für den Passwort-Store aus:
+
+`pass git {{befehl}}`

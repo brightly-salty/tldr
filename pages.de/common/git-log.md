@@ -1,9 +1,9 @@
 # git log
 
 > Zeigt die Commit-Historie an.
-> Mehr Informationen: <https://git-scm.com/docs/git-log>.
+> Weitere Informationen: <https://git-scm.com/docs/git-log>.
 
-- Zeige die Sequenz der Commits des Git-Repository im aktuellen Verzeichnis, beginnend mit dem aktuellen, an.
+- Zeige die Sequenz der Commits des Git-Repository im aktuellen Verzeichnis, beginnend mit dem aktuellen, an:
 
 `git log`
 
@@ -31,6 +31,6 @@
 
 `git log -n {{anzahl}} --author={{autor}}`
 
-- Zeige alle Commits zwischen zwei Zeitpunkten an:
+- Zeige alle Commits zwischen zwei Zeitpunkten an (yyyy-mm-dd):
 
-`git log --before={{datum}} --after={{datum}}`
+`git log --before="{{2017-01-29}}" --after="{{2017-01-17}}"`

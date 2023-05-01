@@ -1,6 +1,6 @@
 # test
 
-> Evaluate condition.
+> Check file types and compare values.
 > Returns 0 if the condition evaluates to true, 1 if it evaluates to false.
 > More information: <https://www.gnu.org/software/coreutils/test>.
 
@@ -20,6 +20,6 @@
 
 `test ! -d "{{path/to/directory}}"`
 
-- If-else statement:
+- If A is true, then do B, or C in the case of an error (notice that C may run even if A fails):
 
 `test {{condition}} && {{echo "true"}} || {{echo "false"}}`

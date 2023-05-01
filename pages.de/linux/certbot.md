@@ -2,7 +2,7 @@
 
 > The Let's Encrypt Agent zum automatischen Erhalten und Erneuern von TLS-Zertifikaten.
 > Nachfolger von `letsencrypt`.
-> Mehr Informationen: <https://certbot.eff.org/docs/using.html>.
+> Weitere Informationen: <https://certbot.eff.org/docs/using.html>.
 
 - Beziehe ein neues Zertifikat über die webroot-Autorisierung, aber ohne dieses automatisch zu installieren:
 
@@ -24,6 +24,6 @@
 
 `sudo certbot --webroot --webroot-path {{pfad/zu/webroot}} --domain {{subdomain.beispiel.de}} --dry-run`
 
-- Beziehe eine Test-Zertifikat:
+- Beziehe ein Test-Zertifikat:
 
 `sudo certbot --webroot --webroot-path {{pfad/zu/webroot}} --domain {{subdomain.beispiel.de}} --test-cert`

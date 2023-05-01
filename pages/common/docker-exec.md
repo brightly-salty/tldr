@@ -15,11 +15,11 @@
 
 `docker exec --interactive -tty --workdir {{path/to/directory}} {{container_name}} {{command}}`
 
-- Run a command in background on existing container but keep stdin open:
+- Run a command in background on existing container but keep `stdin` open:
 
 `docker exec --interactive --detach {{container_name}} {{command}}`
 
-- Set an environment variable in a running bash session:
+- Set an environment variable in a running Bash session:
 
 `docker exec --interactive --tty --env {{variable_name}}={{value}} {{container_name}} {{/bin/bash}}`
 

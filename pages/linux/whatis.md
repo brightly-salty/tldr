@@ -1,6 +1,7 @@
 # whatis
 
 > Display one-line descriptions from manual pages.
+> More information: <https://manned.org/whatis>.
 
 - Display a description from a man page:
 
@@ -17,3 +18,7 @@
 - Search man page descriptions with a regular expression:
 
 `whatis --regex '{{wish[0-9]\.[0-9]}}'`
+
+- Display descriptions of a specific language (requires `manpage-{{locale}}` package):
+
+`whatis --locale={{en}} {{command}}`

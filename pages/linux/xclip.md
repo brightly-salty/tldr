@@ -2,6 +2,7 @@
 
 > X11 clipboard manipulation tool, similar to `xsel`.
 > Handles the X primary and secondary selections, plus the system clipboard (`Ctrl + C`/`Ctrl + V`).
+> More information: <https://manned.org/xclip>.
 
 - Copy the output from a command to the X11 primary selection area (clipboard):
 
@@ -19,7 +20,7 @@
 
 `xclip -sel clip {{input_file.txt}}`
 
-- Copy the contents of a PNG image into the system clipboard (can be pasted in other programs correctly):
+- Copy the contents of a PNG into the system clipboard (can be pasted in other programs correctly):
 
 `xclip -sel clip -t image/png {{input_file.png}}`
 

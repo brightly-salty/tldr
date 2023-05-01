@@ -6,7 +6,11 @@
 
 - Open a file:
 
-`micro {{file}}`
+`micro {{path/to/file}}`
+
+- Save a file:
+
+`Ctrl + S`
 
 - Cut the entire line:
 

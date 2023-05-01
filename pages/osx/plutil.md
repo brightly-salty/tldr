@@ -1,6 +1,7 @@
 # plutil
 
 > View, convert, validate, or edit property list ("plist") files.
+> More information: <https://www.manpagez.com/man/1/plutil/>.
 
 - Display the contents of one or more plist files in human-readable format:
 
@@ -18,6 +19,6 @@
 
 `plutil -convert {{xml1|binary1|json|swift|objc}} {{path/to/file.plist}} -o {{path/to/new_file.plist}}`
 
-- Convert a plist file to a different format, writing to stdout:
+- Convert a plist file to a different format, writing to `stdout`:
 
 `plutil -convert {{xml1|binary1|json|swift|objc}} {{path/to/file.plist}} -o -`

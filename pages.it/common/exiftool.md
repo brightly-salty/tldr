@@ -1,7 +1,7 @@
 # exiftool
 
 > Leggi e scrivi metadati nei file.
-> Maggiori informazioni: <https://owl.phy.queensu.ca/~phil/exiftool>.
+> Maggiori informazioni: <https://exiftool.org>.
 
 - Rimuovi tutti i metadati EXIF dai file specificati:
 
@@ -9,7 +9,7 @@
 
 - Muovi avanti di 1 ora la data in cui sono state scattate tutte le foto contenute in una directory:
 
-`exiftool "-AllDates+=0:0:0 1:0:0" {{percorso/a/directory}}`
+`exiftool "-AllDates+=0:0:0 1:0:0" {{percorso/della/directory}}`
 
 - Muovi indietro di 1 giorno e 2 ore la data in cui sono state scattate tutte le immagini JPEG:
 
@@ -21,4 +21,4 @@
 
 - Rinomina ricorsivamente tutti i file JPEG in una directory in base al campo `DateTimeOriginal`:
 
-`exiftool '-filename<DateTimeOriginal' -d %Y-%m-%d_%H-%M-%S%%lc.%%e {{percorso/a/directory}} -r -ext jpg`
+`exiftool '-filename<DateTimeOriginal' -d %Y-%m-%d_%H-%M-%S%%lc.%%e {{percorso/della/directory}} -r -ext jpg`

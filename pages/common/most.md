@@ -1,6 +1,7 @@
 # most
 
 > Open one or several files for interactive reading, allowing scrolling and search.
+> More information: <https://manned.org/most>.
 
 - Open a file:
 
@@ -12,7 +13,7 @@
 
 - Open a file at the first occurrence of "string":
 
-`most {{file}} +/{{string}}`
+`most {{path/to/file}} +/{{string}}`
 
 - Move through opened files:
 

@@ -1,15 +1,15 @@
 # getprop
 
-> Show information about adb devices and emulators.
+> Show information about Android system properties.
 > More information: <https://manned.org/getprop>.
 
-- Display information about the Android system properties:
+- Display information about Android system properties:
 
 `getprop`
 
 - Display information about a specific property:
 
-`getprop {{prop}}`
+`getprop {{property}}`
 
 - Display the SDK API level:
 
@@ -27,6 +27,6 @@
 
 `getprop {{ro.oem_unlock_supported}}`
 
-- Display the MAC address of the Android's WiFi card:
+- Display the MAC address of the Android's Wi-Fi card:
 
 `getprop {{ro.boot.wifimacaddr}}`

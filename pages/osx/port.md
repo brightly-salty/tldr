@@ -1,6 +1,7 @@
 # port
 
 > Package manager for macOS.
+> More information: <https://www.macports.org>.
 
 - Search for a package:
 
@@ -14,7 +15,7 @@
 
 `port installed`
 
-- Update port and fetch latest list of available packages:
+- Update port and fetch the latest list of available packages:
 
 `sudo port selfupdate`
 

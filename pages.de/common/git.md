@@ -1,17 +1,18 @@
 # git
 
 > Verteiltes Versionskontrollsystem.
-> Mehr Informationen: <https://git-scm.com/>.
+> Manche Unterbefehle wie `git commit` sind separat dokumentiert.
+> Weitere Informationen: <https://git-scm.com/>.
 
 - Gib die installierte Git Version aus:
 
 `git --version`
 
-- Zeige die generelle Hilfsseite an:
+- Zeige die generelle Hilfeseite an:
 
 `git --help`
 
-- Zeige die Hilfsseite eines Unterbefehls an:
+- Zeige die Hilfeseite eines Unterbefehls an:
 
 `git help {{unterbefehl}}`
 

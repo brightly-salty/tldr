@@ -1,14 +1,14 @@
 # aws
 
 > Das offizielle CLI für Amazon Web Services.
-> Ausführungssassistent, SSO, Autovervollständigung von Ressourcen sowie YAML Optionen sind nur unter Version v2 verfügbar.
-> Mehr Informationen: <https://aws.amazon.com/cli>.
+> Manche Unterbefehle wie `aws s3` sind separat dokumentiert.
+> Weitere Informationen: <https://aws.amazon.com/cli>.
 
 - Konfiguriere die AWS Kommandozeile:
 
 `aws configure wizard`
 
-- Konfiguriere die AWS Kommandozeile mit Hilfe von SSO:
+- Konfiguriere die AWS Kommandozeile mithilfe von SSO:
 
 `aws configure sso`
 
@@ -16,7 +16,7 @@
 
 `aws {{befehl}} help`
 
-- Zeige Informationen über die eigene angenomme Identität (häufig benutzt zur Fehlersuche):
+- Zeige Informationen über die eigene angenommene Identität (häufig benutzt zur Fehlersuche):
 
 `aws sts get-caller-identity`
 
@@ -28,7 +28,7 @@
 
 `aws iam create-user --cli-auto-prompt`
 
-- Öffne einen Assitenten für eine AWS Ressource:
+- Öffne einen Assistenten für eine AWS Ressource:
 
 `aws dynamodb wizard {{neue_tabelle}}`
 

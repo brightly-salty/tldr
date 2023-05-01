@@ -1,6 +1,7 @@
 # duti
 
 > Set default applications for document types and URL schemes on macOS.
+> More information: <https://github.com/moretension/duti>.
 
 - Set Safari as the default handler for HTML documents:
 
@@ -12,7 +13,7 @@
 
 - Set Finder as the default handler for the ftp:// URL scheme:
 
-`duti -s {{com.apple.Finder}} {{ftp}}`
+`duti -s {{com.apple.Finder}} "{{ftp}}"`
 
 - Display information about the default application for a given extension:
 

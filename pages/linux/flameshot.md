@@ -1,25 +1,37 @@
 # flameshot
 
-> Screenshot utility with a gui interface.
+> Screenshot utility with a GUI.
 > Supports basic image editing, such as text, shapes, colors, and imgur.
-> More information: <https://flameshot.js.org>.
+> More information: <https://flameshot.org>.
 
-- Launch flameshot in gui mode:
-
-`flameshot launcher`
-
-- Take a screenshot by clicking and dragging:
-
-`flameshot gui`
-
-- Take a full screen screenshot:
+- Create a fullscreen screenshot:
 
 `flameshot full`
 
-- Set the save path to write screenshots to:
+- Create a screenshot interactively:
 
-`flameshot full --path {{path/to/directory}}`
+`flameshot gui`
 
-- Delay the screenshot for N milliseconds and output to clipboard:
+- Create a screenshot and save it to a specific path:
 
-`flameshot full --delay {{2000}} --clipboard`
+`flameshot gui --path {{path/to/directory}}`
+
+- Create a screenshot interactively in a simplified mode:
+
+`flameshot launcher`
+
+- Create a screenshot from a specific monitor:
+
+`flameshot screen --number {{2}}`
+
+- Create a screenshot and print it to the standard output:
+
+`flameshot gui --raw`
+
+- Create a screenshot and copy it to the clipboard:
+
+`flameshot gui --clipboard`
+
+- Create a screenshot with a specific delay in milliseconds:
+
+`flameshot full --delay {{5000}}`

@@ -1,12 +1,16 @@
 # mkdir
 
-> Creates a directory.
+> Create directories and set their permissions.
 > More information: <https://www.gnu.org/software/coreutils/mkdir>.
 
-- Create a directory in current directory or given path:
+- Create specific directories:
 
-`mkdir {{directory}}`
+`mkdir {{path/to/directory1 path/to/directory2 ...}}`
 
-- Create directories recursively (useful for creating nested dirs):
+- Create specific directories and their [p]arents if needed:
 
-`mkdir -p {{path/to/directory}}`
+`mkdir -p {{path/to/directory1 path/to/directory2 ...}}`
+
+- Create directories with specific permissions:
+
+`mkdir -m {{rwxrw-r--}} {{path/to/directory1 path/to/directory2 ...}}`

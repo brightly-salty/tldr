@@ -1,7 +1,7 @@
 # aws s3
 
 > CLI für AWS S3. AWS S3 stellt Speicherplatz in der Cloud zur Verfügung.
-> Mehr Informationen: <https://aws.amazon.com/cli>.
+> Weitere Informationen: <https://awscli.amazonaws.com/v2/documentation/api/latest/reference/s3/index.html>.
 
 - Liste alle Objekte in einem Bucket auf:
 
@@ -23,6 +23,6 @@
 
 `aws s3 rm s3://{{bucket}}/{{pfad/zu/datei}}`
 
-- Probelauf eines angegeben Kommandos ohne diesen auszuführen:
+- Probelauf eines angegebenen Kommandos ohne dieses auszuführen:
 
 `aws s3 {{befehl}} --dryrun`

@@ -1,11 +1,12 @@
 # dpkg
 
 > Gestore di pacchetti Debian.
-> Maggiori informazioni: <https://manpages.debian.org/buster/dpkg/dpkg.1.en.html>.
+> Alcuni comandi aggiuntivi, come `dpkg deb`, hanno la propria documentazione.
+> Maggiori informazioni: <https://manpages.debian.org/latest/dpkg/dpkg.html>.
 
 - Installa un pacchetto:
 
-`dpkg -i {{percorso/al/file.deb}}`
+`dpkg -i {{percorso/del/file.deb}}`
 
 - Rimuove un pacchetto:
 
@@ -21,7 +22,7 @@
 
 - Elenca i contenuti di un file pacchetto locale:
 
-`dpkg -c {{percorso/al/file.deb}}`
+`dpkg -c {{percorso/del/file.deb}}`
 
 - Trova a quale pacchetto appartiene un file:
 

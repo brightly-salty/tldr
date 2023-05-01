@@ -1,7 +1,7 @@
 # aws kinesis
 
 > Offizielles AWS CLI für die Amazon Kinesis-Streaming-Datenplattform.
-> Mehr Informationen: <https://docs.aws.amazon.com/cli/latest/reference/kinesis/index.html#cli-aws-kinesis>.
+> Weitere Informationen: <https://docs.aws.amazon.com/cli/latest/reference/kinesis/index.html#cli-aws-kinesis>.
 
 - Liste alle Streams auf:
 
@@ -11,7 +11,7 @@
 
 `aws kinesis put-record --stream-name {{name}} --partition-key {{schlüssel}} --data {{base64_codierte_nachricht}}`
 
-- Schreibe einen Datensatze in einen Kinesis Stream mit base64 inline Encodierung:
+- Schreibe einen Datensatz in einen Kinesis Stream mit base64 inline Encodierung:
 
 `aws kinesis put-record --stream-name {{name}} --partition-key {{schlüssel}} --data "$( echo "{{meine nachricht}}" | base64 )"`
 

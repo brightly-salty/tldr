@@ -2,6 +2,7 @@
 
 > Secure Shell ist ein Protokoll für das sichere einloggen auf einem externen System.
 > Es kann dafür eingesetzt werden um Befehle auf externen Systemen auszuführen.
+> Weitere Informationen: <https://man.openbsd.org/ssh>.
 
 - Stelle eine Verbindung zu einem externen Server her:
 
@@ -31,6 +32,6 @@
 
 `ssh -J {{benutzer@sring_server}} {{benutzer}}@{{externer_server}}`
 
-- Agenten Weiterleitung: Leite ie eigenen Authentifizierungs-Information an den externen Server weiter (siehe `man ssh_config` für mehr Optionen):
+- Agenten Weiterleitung: Leite die eigenen Authentifizierungs-Informationen an den externen Server weiter (siehe `man ssh_config` für mehr Optionen):
 
 `ssh -A {{benutzer}}@{{externer_server}}`

@@ -1,8 +1,8 @@
 # cargo
 
-> Rust package manager.
 > Manage Rust projects and their module dependencies (crates).
-> More information: <https://crates.io/>.
+> Some subcommands such as `cargo build` have their own usage documentation.
+> More information: <https://crates.io>.
 
 - Search for crates:
 
@@ -28,6 +28,10 @@
 
 `cargo build`
 
+- Build the rust project in the current directory using the nightly compiler:
+
+`cargo +nightly build`
+
 - Build using a specific number of threads (default is the number of CPU cores):
 
-`cargo build -j {{jobs}}`
+`cargo build --jobs {{number_of_threads}}`

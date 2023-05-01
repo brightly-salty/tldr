@@ -1,8 +1,8 @@
 # lpr
 
 > CUPS tool for printing files.
-> See also `lpstat` and `lpadmin` for listing and configuring printers.
-> More information: <http://www.CUPS.org>.
+> See also: `lpstat` and `lpadmin`.
+> More information: <https://www.cups.org/doc/man-lpr.html>.
 
 - Print a file to the default printer:
 
@@ -20,9 +20,9 @@
 
 `lpr -o page-ranges={{2|2-16}} {{path/to/file}}`
 
-- Print double sided either in portrait (long) or in landscape (short):
+- Print double-sided either in portrait (long) or in landscape (short):
 
-`lpr -o sides={{two_sided_long_edge|two_sided_short_edge}} {{path/to/file}}`
+`lpr -o sides={{two-sided-long-edge|two-sided-short-edge}} {{path/to/file}}`
 
 - Set page size (more options may be available depending on setup):
 

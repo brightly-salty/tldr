@@ -1,7 +1,7 @@
 # faketime
 
 > Fake the system time for a given command.
-> More information: <https://manpages.ubuntu.com/manpages/trusty/man1/faketime.1.html>.
+> More information: <https://manned.org/faketime>.
 
 - Fake the time to this evening, before printing the result of `date`:
 
@@ -11,6 +11,6 @@
 
 `faketime '{{yesterday}}' {{bash}}`
 
-- Simulate how any program would act next friday night:
+- Simulate how a program would act next Friday night:
 
-`faketime '{{next Friday 1 am}}' {{path/to/any/program}}`
+`faketime '{{next Friday 1 am}}' {{path/to/program}}`

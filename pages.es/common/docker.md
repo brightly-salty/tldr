@@ -1,15 +1,12 @@
 # docker
 
 > Administra contenedores e imágenes de Docker.
+> Algunos subcomandos, como `docker run`, tienen su propia documentación de uso.
 > Más información: <https://docs.docker.com/engine/reference/commandline/cli/>.
-
-- Lista los contenedores de Docker en ejecución:
-
-`docker ps`
 
 - Lista todos los contenedores de Docker (en ejecución y detenidos):
 
-`docker ps -a`
+`docker ps --all`
 
 - Inicia un contenedor desde una imagen con un nombre personalizado:
 
@@ -22,6 +19,10 @@
 - Descarga una imagen desde un registro de Docker:
 
 `docker pull {{imagen}}`
+
+- Muestra la lista de imagenes descargadas:
+
+`docker images`
 
 - Inicia una línea de Comandos dentro de un contenedor en ejecución:
 

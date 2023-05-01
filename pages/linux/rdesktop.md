@@ -2,6 +2,7 @@
 
 > Remote Desktop Protocol client.
 > It can be used to connect the remote computer using the RDP protocol.
+> More information: <https://manned.org/rdesktop>.
 
 - Connect to a remote computer (default port is 3389):
 
@@ -23,6 +24,6 @@
 
 `rdesktop -u {{username}} -p {{password}} -d {{domainname}} {{host:port}}`
 
-- Use the 16 bit color (speed up):
+- Use the 16-bit color (speed up):
 
 `rdesktop -u {{username}} -p {{password}} -a 16 {{host:port}}`

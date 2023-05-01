@@ -1,6 +1,7 @@
 # reboot
 
 > Reinicia la máquina.
+> Más información: <https://manned.org/reboot.8>.
 
 - Reinicia inmediatamente:
 

@@ -1,8 +1,8 @@
 # ansible
 
-> Verwalte Computergruppen per Fernzugriff über SSH.
-> Verwende die Datei `/etc/ansible/hosts`, um neue Gruppen/Hosts hinzuzufügen.
-> Mehr Informationen: <https://www.ansible.com/>.
+> Verwalte Computergruppen per Fernzugriff über SSH (Verwende die Datei `/etc/ansible/hosts`, um neue Gruppen/Hosts hinzuzufügen).
+> Manche Unterbefehle wie `ansible galaxy` sind separat dokumentiert.
+> Weitere Informationen: <https://www.ansible.com/>.
 
 - Liste Hosts auf, die zu einer Gruppe gehören:
 
@@ -27,3 +27,7 @@
 - Führe einen Befehl mit einer benutzerdefinierten Inventardatei aus:
 
 `ansible {{Gruppe}} -i {{inventardatei}} -m command -a '{{befehl}}'`
+
+- Liste alle Gruppen eines Inventars auf:
+
+`ansible localhost -m debug -a '{{var=groups.keys()}}'`

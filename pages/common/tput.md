@@ -1,10 +1,11 @@
 # tput
 
 > View and modify terminal settings and capabilities.
+> More information: <https://manned.org/tput>.
 
 - Move the cursor to a screen location:
 
-`tput cup {{y_coordinate}} {{x_coordinate}}`
+`tput cup {{row}} {{column}}`
 
 - Set foreground (af) or background (ab) color:
 
@@ -22,6 +23,6 @@
 
 `tput sgr0`
 
-- Enable / Disable word wrap:
+- Enable or disable word wrap:
 
 `tput {{smam|rmam}}`

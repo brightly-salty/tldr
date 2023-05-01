@@ -2,6 +2,7 @@
 
 > An apt like system for Slackware package management.
 > Package sources need to be configured in the slapt-getrc file.
+> More information: <https://software.jaos.org>.
 
 - Update the list of available packages and versions:
 
@@ -19,7 +20,7 @@
 
 `slapt-get --upgrade`
 
-- Locate packages of interest by the package name, disk set, or version:
+- Locate packages by the package name, disk set, or version:
 
 `slapt-get --search {{package_name}}`
 
